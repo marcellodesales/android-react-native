@@ -7,11 +7,16 @@ The development container will map your $HOME directory to its /userdata, so you
 
 If the default emulator doesn't work with your distro you might want to use another image.
 
+>
+> FOR UBUNTU 16.04 Hosts on VMWare, this repo is changed to use the `ubuntu-trusty` version.
+> Make sure to setup your VM Advanced processor to use virtualization `VTx/ETP`. That will
+> create the directory `/dev/kvm` to be used in Emulators if needed.
+
 To do that set an environment variable named EMULATOR_DISTRO with one of the existing image versions:
-- debian-jessie
-- ubuntu-trusty
-- ubuntu-xenial
-- archlinux-latest
+- [ ] debian-jessie
+- [x] **ubuntu-trusty** 
+- [ ] ubuntu-xenial
+- [ ] archlinux-latest
 
 Or edit the .env file in this project.
 
