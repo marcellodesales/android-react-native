@@ -7,7 +7,7 @@ ENV TERM=xterm
 RUN dpkg --add-architecture i386 && \
     curl -sL https://deb.nodesource.com/setup_4.x | bash - && \
     apt-get install -y nodejs libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 build-essential \
-    python-dev autoconf dtach vim tmux libc6:i386 libstdc++6:i386 zlib1g:i386 libgl1-mesa-dri && \
+    python-dev autoconf dtach vim tmux && \
     apt-get clean
 RUN npm install -g react-native-cli
 RUN cd /tmp && git clone https://github.com/facebook/watchman.git && cd watchman && \
